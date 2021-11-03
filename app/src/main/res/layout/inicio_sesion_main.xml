@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/Titulo"
+        android:id="@+id/txtTituloIS"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="26dp"
@@ -31,13 +31,13 @@
         android:ems="10"
         android:hint="Correo o usuario"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/UserPass"
+        app:layout_constraintBottom_toTopOf="@+id/txtUserPass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/User" />
+        app:layout_constraintTop_toBottomOf="@+id/txtUser" />
 
     <TextView
-        android:id="@+id/User"
+        android:id="@+id/txtUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
@@ -47,12 +47,12 @@
         android:textColor="#68DD02"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/Titulo"
+        app:layout_constraintBottom_toTopOf="@+id/txtTituloIS"
         app:layout_constraintEnd_toEndOf="@+id/view2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/UserPass"
+        android:id="@+id/txtUserPass"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="26dp"
@@ -64,7 +64,7 @@
         app:layout_constraintBottom_toTopOf="@+id/LinkRecuperacion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloIS" />
 
     <TextView
         android:id="@+id/LinkRecuperacion"
@@ -75,12 +75,12 @@
         android:text="¿Olvidaste tu contraseña o usuario?"
         android:textColor="#087FFF"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintStart_toStartOf="@+id/UserPass"
-        app:layout_constraintTop_toBottomOf="@+id/UserPass" />
+        app:layout_constraintBottom_toTopOf="@+id/btnIngresar"
+        app:layout_constraintStart_toStartOf="@+id/txtUserPass"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserPass" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btnIngresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="282dp"
