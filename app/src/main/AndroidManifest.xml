@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SignToAll">
         <activity
+            android:name=".Listado"
+            android:exported="false" />
+        <activity
             android:name=".Seleccion"
             android:exported="false" />
         <activity

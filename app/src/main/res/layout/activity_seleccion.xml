@@ -6,4 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".Seleccion">
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona tu curso"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="101dp" />
+
+    <RadioGroup
+        android:layout_width="305dp"
+        android:layout_height="243dp"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="219dp">
+
+        <RadioButton
+            android:id="@+id/primero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Primero" />
+
+        <RadioButton
+            android:id="@+id/segundo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Segundo" />
+
+        <RadioButton
+            android:id="@+id/tercero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tercero" />
+
+        <RadioButton
+            android:id="@+id/cuarto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cuarto" />
+
+        <RadioButton
+            android:id="@+id/quinto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quinto" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
