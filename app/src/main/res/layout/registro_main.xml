@@ -7,4 +7,112 @@
     android:background="@drawable/bg2"
     tools:context=".Registro">
 
+    <View
+        android:id="@+id/view3"
+        android:layout_width="375dp"
+        android:layout_height="833dp"
+        android:background="#BAFFFFFF"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="27dp" />
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido al registro"
+        android:textColor="#68DD02"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="27dp" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="343dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Ingresa tu nombre"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="82dp" />
+
+    <EditText
+        android:id="@+id/txtApellido"
+        android:layout_width="343dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Ingresa tu apellido"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <EditText
+        android:id="@+id/editTextNumberSigned"
+        android:layout_width="343dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Ingresa el No. de la T.I. o C.C."
+        android:inputType="numberSigned"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="195dp" />
+
+    <EditText
+        android:id="@+id/txtCorreo"
+        android:layout_width="343dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Ingresa tu correo institucional"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="251dp" />
+
+    <EditText
+        android:id="@+id/txtPass1"
+        android:layout_width="343dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Crea una contraseña"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="434dp" />
+
+    <EditText
+        android:id="@+id/txtPass2"
+        android:layout_width="343dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Confirma la contraseña"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="306dp">
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Profesor" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estudiante" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#68DD02"
+        android:text="Registrarse"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="577dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
