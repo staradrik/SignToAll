@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SignToAll">
         <activity
-            android:name=".InicioSesionMainActivity"
+            android:name=".InicioSesion"
             android:exported="true" />
         <activity
-            android:name=".RegistroMainActivity"
+            android:name=".Registro"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
