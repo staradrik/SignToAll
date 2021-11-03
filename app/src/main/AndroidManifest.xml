@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SignToAll">
         <activity
+            android:name=".InicioSesionMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegistroMainActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
