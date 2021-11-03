@@ -87,8 +87,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="381dp"
+        android:layout_height="154dp"
         android:layout_marginStart="9dp"
         android:layout_marginEnd="9dp"
         android:layout_marginBottom="20dp"
@@ -102,8 +102,8 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="395dp"
-        android:layout_height="0dp"
+        android:layout_width="378dp"
+        android:layout_height="145dp"
         android:layout_marginBottom="11dp"
         android:text="Facilitar la comunicación y el aprendizaje de niños de grado segundo que poseen una discapacidad auditiva, por medio de una plataforma web que permita una interacción de manera natural con sus compañeros y docentes."
         android:textSize="20sp"
@@ -115,8 +115,8 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="377dp"
+        android:layout_height="168dp"
         android:layout_marginStart="11dp"
         android:layout_marginEnd="11dp"
         android:layout_marginBottom="28dp"
