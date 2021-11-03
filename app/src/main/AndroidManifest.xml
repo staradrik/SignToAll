@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SignToAll">
         <activity
+            android:name=".Seleccion"
+            android:exported="false" />
+        <activity
+            android:name=".Crud"
+            android:exported="false" />
+        <activity
             android:name=".InicioSesion"
             android:exported="true" />
         <activity
