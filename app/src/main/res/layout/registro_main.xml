@@ -9,88 +9,131 @@
 
     <View
         android:id="@+id/view3"
-        android:layout_width="375dp"
-        android:layout_height="833dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="9dp"
         android:background="#BAFFFFFF"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="27dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="23dp"
         android:text="Bienvenido al registro"
         android:textColor="#68DD02"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="27dp" />
+        app:layout_constraintBottom_toTopOf="@+id/txtNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/txtNombre"
-        android:layout_width="343dp"
-        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="17dp"
         android:ems="10"
         android:hint="Ingresa tu nombre"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="82dp" />
+        app:layout_constraintBottom_toTopOf="@+id/txtApellido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 
     <EditText
         android:id="@+id/txtApellido"
-        android:layout_width="343dp"
-        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="Ingresa tu apellido"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="139dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
 
     <EditText
         android:id="@+id/editTextNumberSigned"
-        android:layout_width="343dp"
-        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="Ingresa el No. de la T.I. o C.C."
         android:inputType="numberSigned"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="195dp" />
+        app:layout_constraintBottom_toTopOf="@+id/txtCorreo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtApellido" />
 
     <EditText
         android:id="@+id/txtCorreo"
-        android:layout_width="343dp"
-        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="Ingresa tu correo institucional"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="251dp" />
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberSigned" />
 
     <EditText
         android:id="@+id/txtPass1"
-        android:layout_width="343dp"
-        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="Crea una contraseña"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="434dp" />
+        app:layout_constraintBottom_toTopOf="@+id/txtPass2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <EditText
         android:id="@+id/txtPass2"
-        android:layout_width="343dp"
-        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="43dp"
         android:ems="10"
         android:hint="Confirma la contraseña"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="494dp" />
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPass1" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="306dp">
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPass1"
+        app:layout_constraintStart_toStartOf="@+id/txtPass1"
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreo">
 
         <RadioButton
             android:id="@+id/radioButton2"
@@ -110,9 +153,12 @@
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="226dp"
         android:backgroundTint="#68DD02"
         android:text="Registrarse"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="577dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPass2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
