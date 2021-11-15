@@ -11,46 +11,38 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Selecciona tu curso"
+        android:layout_marginTop="129dp"
+        android:layout_marginBottom="205dp"
+        android:text="Selecciona la asigantura"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="101dp" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioGroup
-        android:layout_width="305dp"
-        android:layout_height="243dp"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="219dp">
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="13dp"
+        android:onClick="matema"
+        android:text="MATEMÁTICAS"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintEnd_toEndOf="@+id/button8"
+        app:layout_constraintStart_toStartOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-        <RadioButton
-            android:id="@+id/primero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Primero" />
-
-        <RadioButton
-            android:id="@+id/segundo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Segundo" />
-
-        <RadioButton
-            android:id="@+id/tercero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tercero" />
-
-        <RadioButton
-            android:id="@+id/cuarto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Cuarto" />
-
-        <RadioButton
-            android:id="@+id/quinto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Quinto" />
-    </RadioGroup>
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="146dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="253dp"
+        android:onClick="espanol"
+        android:text="ESPAÑOL"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
