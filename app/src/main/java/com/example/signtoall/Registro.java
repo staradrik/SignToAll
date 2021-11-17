@@ -22,6 +22,8 @@ import java.util.Map;
 
 public class Registro extends AppCompatActivity {
 
+
+    String ip = "192.168.64.2:80"; //ip del host para ahorrar tiempo
     EditText txtNombre, txtApellido, editTextNumberSigned, txtCorreo, txtPass1, txtPass2 ;
     Button ButtonProfesor, ButtonEstudiante;
     RequestQueue requestQueue;
@@ -44,7 +46,7 @@ public class Registro extends AppCompatActivity {
         ButtonProfesor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ejecutarProfesor("http://192.168.0.106/Sign_to_All/Insertar_profesor.php");
+                ejecutarProfesor("http://" + ip + "/Sign_to_All/Insertar_profesor.php");
             }
         });
 
@@ -52,7 +54,7 @@ public class Registro extends AppCompatActivity {
         ButtonEstudiante.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ejecutarEstudiante("http://192.168.0.106/Sign_to_All/Insertar_estudiante.php");
+                ejecutarEstudiante("http://" + ip + "/Sign_to_All/Insertar_estudiante.php");
             }
         });
     }

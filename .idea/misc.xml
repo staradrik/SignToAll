@@ -9,12 +9,8 @@
         <entry key="..\:/Universidad/Sexto/Electiva/SignToAll/app/src/main/res/layout/activity_seleccion.xml" value="0.25" />
         <entry key="..\:/Universidad/Sexto/Electiva/SignToAll/app/src/main/res/layout/inicio_sesion_main.xml" value="0.18" />
         <entry key="..\:/Universidad/Sexto/Electiva/SignToAll/app/src/main/res/layout/registro_main.xml" value="0.18" />
-        <entry key="..\:/Users/Adri/AndroidStudioProjects/SignToAll/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
-        <entry key="..\:/Users/Adri/AndroidStudioProjects/SignToAll/app/src/main/res/drawable/ic_launcher_background.xml" value="0.17314814814814813" />
         <entry key="..\:/Users/Adri/AndroidStudioProjects/SignToAll/app/src/main/res/layout/activity_crud.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Adri/AndroidStudioProjects/SignToAll/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/Adri/AndroidStudioProjects/SignToAll/app/src/main/res/layout/activity_matematicas.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Adri/AndroidStudioProjects/SignToAll/app/src/main/res/layout/activity_seleccion.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Adri/AndroidStudioProjects/SignToAll/app/src/main/res/layout/inicio_sesion_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Adri/AndroidStudioProjects/SignToAll/app/src/main/res/layout/registro_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/crist/AndroidStudioProjects/SignToAll/app/src/main/res/layout/activity_listado.xml" value="0.2" />
@@ -26,6 +22,8 @@
         <entry key="..\:/Users/dayan/AndroidStudioProjects/SignToAll/app/src/main/res/layout/activity_listado.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/SignToAll/app/src/main/res/layout/activity_main.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/SignToAll/app/src/main/res/layout/activity_seleccion.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/layout/activity_espanol.xml" value="0.5822002472187886" />
+        <entry key="app/src/main/res/layout/activity_matematicas.xml" value="0.21331521739130435" />
       </map>
     </option>
   </component>
