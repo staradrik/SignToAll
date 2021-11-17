@@ -34,10 +34,10 @@
         app:layout_constraintBottom_toTopOf="@+id/txtPass2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/crudCorreo" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreo" />
 
     <EditText
-        android:id="@+id/crudApellido"
+        android:id="@+id/txtApellido"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="22dp"
@@ -46,10 +46,10 @@
         android:ems="10"
         android:hint="Ingresa tu apellido"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/crudDocumento"
+        app:layout_constraintBottom_toTopOf="@+id/txtDocumento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/crudNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
 
     <EditText
         android:id="@+id/txtPass2"
@@ -61,13 +61,13 @@
         android:ems="10"
         android:hint="Confirma la contraseña"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/btnRegistro"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegDoc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPass1" />
 
     <EditText
-        android:id="@+id/crudNombre"
+        android:id="@+id/txtNombre"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
@@ -76,13 +76,13 @@
         android:ems="10"
         android:hint="Ingresa tu nombre"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/crudApellido"
+        app:layout_constraintBottom_toTopOf="@+id/txtApellido"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 
     <EditText
-        android:id="@+id/crudDocumento"
+        android:id="@+id/txtDocumento"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
@@ -91,13 +91,13 @@
         android:ems="10"
         android:hint="Ingresa el No. de la T.I. o C.C."
         android:inputType="numberSigned"
-        app:layout_constraintBottom_toTopOf="@+id/crudCorreo"
+        app:layout_constraintBottom_toTopOf="@+id/txtCorreo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/crudApellido" />
+        app:layout_constraintTop_toBottomOf="@+id/txtApellido" />
 
     <Button
-        android:id="@+id/btnRegistro"
+        android:id="@+id/btnRegDoc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="19dp"
@@ -106,24 +106,24 @@
         android:onClick="Agregar_Profesor"
         android:text="Soy docente"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnRegistro2"
+        app:layout_constraintEnd_toStartOf="@+id/btnRegEst"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPass2" />
 
     <Button
-        android:id="@+id/btnRegistro2"
+        android:id="@+id/btnRegEst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:backgroundTint="#68DD02"
         android:onClick="Agregar_Estudiante"
         android:text="Soy estudiante"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnRegistro"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnRegDoc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnRegistro" />
+        app:layout_constraintStart_toEndOf="@+id/btnRegDoc" />
 
     <EditText
-        android:id="@+id/crudCorreo"
+        android:id="@+id/txtCorreo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
@@ -135,7 +135,7 @@
         app:layout_constraintBottom_toTopOf="@+id/txtPass1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/crudDocumento" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDocumento" />
 
     <TextView
         android:id="@+id/txtTitulo"
@@ -147,7 +147,7 @@
         android:textColor="#68DD02"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/crudNombre"
+        app:layout_constraintBottom_toTopOf="@+id/txtNombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

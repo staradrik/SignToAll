@@ -36,14 +36,14 @@ public class Crud extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crud);
 
-        crudDocumento =(EditText) findViewById(R.id.crudDocumento);
-        crudNombre =(EditText) findViewById(R.id.crudNombre);
-        crudApellido =(EditText) findViewById(R.id.crudApellido);
-        crudCorreo =(EditText) findViewById(R.id.crudCorreo);
+        crudDocumento =(EditText) findViewById(R.id.txtDocumento);
+        crudNombre =(EditText) findViewById(R.id.txtNombre);
+        crudApellido =(EditText) findViewById(R.id.txtApellido);
+        crudCorreo =(EditText) findViewById(R.id.txtCorreo);
     }
 
     public void Buscar(View v){
-        buscarEstudiante ( "http://192.168.0.6/Sign_to_All/Buscar_estudiante.php?documento="+crudDocumento.getText ()+"");
+        buscarEstudiante ( "http://192.168.0.106/Sign_to_All/Buscar_estudiante.php?documento="+crudDocumento.getText ()+"");
     }
 
     private void buscarEstudiante(String URL){
@@ -74,7 +74,7 @@ public class Crud extends AppCompatActivity {
     }
 
     public void Eliminar(View v){
-        eliminarEstudiante ( "http://192.168.0.6/Sign_to_All/Eliminar_estudiante.php" );
+        eliminarEstudiante ( "http://192.168.0.106/Sign_to_All/Eliminar_estudiante.php" );
     }
 
     private void eliminarEstudiante(String URL){
@@ -105,7 +105,7 @@ public class Crud extends AppCompatActivity {
     }
 
     public void Editar(View v){
-        editarEstudiante ( "http://192.168.0.6/Sign_to_All/Editar_estudiante.php" );
+        editarEstudiante ( "http://192.168.0.106/Sign_to_All/Editar_estudiante.php" );
     }
 
     private void editarEstudiante(String URL){

@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/crudCorreo"
+        android:id="@+id/txtCorreo"
         android:layout_width="238dp"
         android:layout_height="0dp"
         android:layout_marginBottom="18dp"
@@ -33,10 +33,10 @@
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/crudApellido" />
+        app:layout_constraintTop_toBottomOf="@+id/txtApellido" />
 
     <EditText
-        android:id="@+id/crudNombre"
+        android:id="@+id/txtNombre"
         android:layout_width="238dp"
         android:layout_height="0dp"
         android:layout_marginBottom="19dp"
@@ -44,13 +44,13 @@
         android:hint="Nombre"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/crudApellido"
+        app:layout_constraintBottom_toTopOf="@+id/txtApellido"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/crudDocumento" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDocumento" />
 
     <EditText
-        android:id="@+id/crudApellido"
+        android:id="@+id/txtApellido"
         android:layout_width="238dp"
         android:layout_height="0dp"
         android:layout_marginBottom="12dp"
@@ -58,10 +58,10 @@
         android:hint="Apellido"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/crudCorreo"
+        app:layout_constraintBottom_toTopOf="@+id/txtCorreo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/crudNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
 
     <Button
         android:id="@+id/button6"
@@ -112,10 +112,10 @@
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/crudCorreo" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreo" />
 
     <EditText
-        android:id="@+id/crudDocumento"
+        android:id="@+id/txtDocumento"
         android:layout_width="238dp"
         android:layout_height="0dp"
         android:layout_marginTop="63dp"
@@ -124,7 +124,7 @@
         android:hint="Documento"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/crudNombre"
+        app:layout_constraintBottom_toTopOf="@+id/txtNombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -135,7 +135,7 @@
         android:layout_height="42dp"
         android:onClick="Cerrar"
         android:text="Cerrar"
-        app:layout_constraintBottom_toTopOf="@+id/crudDocumento"
+        app:layout_constraintBottom_toTopOf="@+id/txtDocumento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent"

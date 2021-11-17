@@ -59,7 +59,7 @@ public class InicioSesion extends AppCompatActivity {
         user1=user.getText().toString();
         cont1=cont.getText().toString();
         if(!user1.isEmpty() && !cont1.isEmpty()){
-            Validar_Docente("http://192.168.0.6/Sign_to_All/Login_profesor.php");
+            Validar_Docente("http://192.168.0.106/Sign_to_All/Login_profesor.php");
         }
         else {
             Toast.makeText(InicioSesion.this, "Hay campos vacios", Toast.LENGTH_SHORT).show();
@@ -71,7 +71,7 @@ public class InicioSesion extends AppCompatActivity {
         user1=user.getText().toString();
         cont1=cont.getText().toString();
         if(!user1.isEmpty() && !cont1.isEmpty()){
-            Validar_Estudiante("http://192.168.0.6/Sign_to_All/Login_estudiante.php");
+            Validar_Estudiante("http://192.168.0.106/Sign_to_All/Login_estudiante.php");
         }
         else {
             Toast.makeText(InicioSesion.this, "Hay campos vacios", Toast.LENGTH_SHORT).show();
