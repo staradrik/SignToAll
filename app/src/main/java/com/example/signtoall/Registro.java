@@ -2,10 +2,10 @@ package com.example.signtoall;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -22,7 +22,6 @@ import java.util.Map;
 public class Registro extends AppCompatActivity {
 
     EditText txtNombre, txtApellido, editTextNumberSigned, txtCorreo, txtPass1, txtPass2 ;
-    RadioButton radioButtonProfesor, radioButtonEstudiante;
     RequestQueue requestQueue;
 
     @Override
@@ -30,16 +29,60 @@ public class Registro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registro_main);
 
-        txtNombre =(EditText) findViewById(R.id.txtNombre);
-        txtApellido =(EditText) findViewById(R.id.txtApellido);
-        editTextNumberSigned =(EditText) findViewById(R.id.editTextNumberSigned);
-        txtCorreo =(EditText) findViewById(R.id.txtCorreo);
+        txtNombre =(EditText) findViewById(R.id.crudNombre);
+        txtApellido =(EditText) findViewById(R.id.crudApellido);
+        editTextNumberSigned =(EditText) findViewById(R.id.crudDocumento);
+        txtCorreo =(EditText) findViewById(R.id.crudCorreo);
         txtPass1 =(EditText) findViewById(R.id.txtPass1);
         txtPass2 =(EditText) findViewById(R.id.txtPass2);
     }
 
-    public void Agregar(View v){
-        ejecutarProfesor("http://192.168.0.6/Sign_to_All/Insertar_profesor.php");
+    public void Agregar_Profesor(View v){
+        String nombre = txtNombre.getText().toString();
+        String apellido = txtApellido.getText().toString();
+        String ident = editTextNumberSigned.getText().toString();
+        String correo = txtCorreo.getText().toString();
+        String cont = txtPass1.getText().toString();
+        String cont_confir = txtPass2.getText().toString();
+
+        if (!nombre.isEmpty() && !apellido.isEmpty() && !ident.isEmpty() && !correo.isEmpty() && !cont.isEmpty() && !cont_confir.isEmpty()){
+            if (txtPass1.getText().toString().equals(txtPass2.getText().toString())){
+                ejecutarProfesor("http://192.168.0.6/Sign_to_All/Insertar_profesor.php");
+                Intent i=new Intent(this, InicioSesion.class);
+                startActivity(i);
+            }
+            else{
+                Toast.makeText(getApplicationContext(), "Las contraseñas no coinciden", Toast.LENGTH_LONG).show();
+            }
+
+        }else{
+            Toast.makeText(getApplicationContext(), "Debe ingresar todo los campos", Toast.LENGTH_LONG).show();
+        }
+
+    }
+
+    public void Agregar_Estudiante(View v){
+        String nombre = txtNombre.getText().toString();
+        String apellido = txtApellido.getText().toString();
+        String ident = editTextNumberSigned.getText().toString();
+        String correo = txtCorreo.getText().toString();
+        String cont = txtPass1.getText().toString();
+        String cont_confir = txtPass2.getText().toString();
+
+        if (!nombre.isEmpty() && !apellido.isEmpty() && !ident.isEmpty() && !correo.isEmpty() && !cont.isEmpty() && !cont_confir.isEmpty()){
+            if (txtPass1.getText().toString().equals(txtPass2.getText().toString())){
+                ejecutarEstudiante("http://192.168.0.6/Sign_to_All/Insertar_estudiante.php");
+                Intent i=new Intent(this, InicioSesion.class);
+                startActivity(i);
+            }
+            else{
+                Toast.makeText(getApplicationContext(), "Las contraseñas no coinciden", Toast.LENGTH_LONG).show();
+            }
+
+        }else{
+            Toast.makeText(getApplicationContext(), "Debe ingresar todo los campos", Toast.LENGTH_LONG).show();
+        }
+
     }
 
     private void ejecutarEstudiante(String URL){
@@ -48,7 +91,7 @@ public class Registro extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(getApplicationContext(), "OPERACION EXITOSA", Toast.LENGTH_LONG).show();
-
+                Limpiar();
             }
         }, new Response.ErrorListener() {
             @Override
@@ -78,7 +121,7 @@ public class Registro extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(getApplicationContext(), "OPERACION EXITOSA", Toast.LENGTH_LONG).show();
-
+                Limpiar();
             }
         }, new Response.ErrorListener() {
             @Override
@@ -100,5 +143,14 @@ public class Registro extends AppCompatActivity {
         };
         requestQueue= Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+    }
+
+    private void Limpiar(){
+        txtNombre.setText("");
+        txtApellido.setText("");
+        editTextNumberSigned.setText("");
+        txtCorreo.setText("");
+        txtPass1.setText("");
+        txtPass2.setText("");
     }
 }

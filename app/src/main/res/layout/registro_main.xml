@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg2"
-    android:onClick="Agregar"
     tools:context=".Registro">
 
     <View
@@ -35,10 +34,10 @@
         app:layout_constraintBottom_toTopOf="@+id/txtPass2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCorreo" />
+        app:layout_constraintTop_toBottomOf="@+id/crudCorreo" />
 
     <EditText
-        android:id="@+id/txtApellido"
+        android:id="@+id/crudApellido"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="22dp"
@@ -47,10 +46,10 @@
         android:ems="10"
         android:hint="Ingresa tu apellido"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/crudDocumento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/crudNombre" />
 
     <EditText
         android:id="@+id/txtPass2"
@@ -68,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtPass1" />
 
     <EditText
-        android:id="@+id/txtNombre"
+        android:id="@+id/crudNombre"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
@@ -77,13 +76,13 @@
         android:ems="10"
         android:hint="Ingresa tu nombre"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtApellido"
+        app:layout_constraintBottom_toTopOf="@+id/crudApellido"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 
     <EditText
-        android:id="@+id/editTextNumberSigned"
+        android:id="@+id/crudDocumento"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
@@ -92,10 +91,10 @@
         android:ems="10"
         android:hint="Ingresa el No. de la T.I. o C.C."
         android:inputType="numberSigned"
-        app:layout_constraintBottom_toTopOf="@+id/txtCorreo"
+        app:layout_constraintBottom_toTopOf="@+id/crudCorreo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtApellido" />
+        app:layout_constraintTop_toBottomOf="@+id/crudApellido" />
 
     <Button
         android:id="@+id/btnRegistro"
@@ -104,7 +103,7 @@
         android:layout_marginEnd="19dp"
         android:layout_marginBottom="179dp"
         android:backgroundTint="#68DD02"
-        android:onClick="Agregar"
+        android:onClick="Agregar_Profesor"
         android:text="Soy docente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnRegistro2"
@@ -117,14 +116,14 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:backgroundTint="#68DD02"
-        android:onClick="Agregar"
+        android:onClick="Agregar_Estudiante"
         android:text="Soy estudiante"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnRegistro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnRegistro" />
 
     <EditText
-        android:id="@+id/txtCorreo"
+        android:id="@+id/crudCorreo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
@@ -136,7 +135,7 @@
         app:layout_constraintBottom_toTopOf="@+id/txtPass1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberSigned" />
+        app:layout_constraintTop_toBottomOf="@+id/crudDocumento" />
 
     <TextView
         android:id="@+id/txtTitulo"
@@ -148,7 +147,7 @@
         android:textColor="#68DD02"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtNombre"
+        app:layout_constraintBottom_toTopOf="@+id/crudNombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -7,6 +7,20 @@
     android:background="@drawable/bg3"
     tools:context=".InicioSesion">
 
+    <Button
+        android:id="@+id/btnCerrar3"
+        android:layout_width="111dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="484dp"
+        android:backgroundTint="#68DD02"
+        android:onClick="Cerrar"
+        android:text="Cerrar"
+        app:layout_constraintBottom_toTopOf="@+id/crudDocumento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <View
         android:id="@+id/view2"
         android:layout_width="0dp"
@@ -18,20 +32,36 @@
         android:background="#BAFFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <EditText
-        android:id="@+id/txtTituloIS"
+    <Button
+        android:id="@+id/btnIngresarEstu"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="296dp"
+        android:backgroundTint="#68DD02"
+        android:onClick="Iniciar_Estudiante"
+        android:text="Ingresar Estudiante"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnIngresarDoce"
+        app:layout_constraintTop_toBottomOf="@+id/LinkRecuperacion" />
+
+    <EditText
+        android:id="@+id/logCorreo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="37dp"
         android:ems="10"
         android:hint="Correo o usuario"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtUserPass"
+        app:layout_constraintBottom_toTopOf="@+id/logCont"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtUser" />
@@ -41,22 +71,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
-        android:layout_marginEnd="22dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="34dp"
         android:text="Bienvenido al inicio de sesión."
         android:textColor="#68DD02"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtTituloIS"
+        app:layout_constraintBottom_toTopOf="@+id/logCorreo"
         app:layout_constraintEnd_toEndOf="@+id/view2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtUserPass"
+        android:id="@+id/logCont"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="26dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
         android:layout_marginBottom="22dp"
         android:ems="10"
         android:hint="Contraseña"
@@ -64,30 +94,32 @@
         app:layout_constraintBottom_toTopOf="@+id/LinkRecuperacion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTituloIS" />
+        app:layout_constraintTop_toBottomOf="@+id/logCorreo" />
 
     <TextView
         android:id="@+id/LinkRecuperacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="138dp"
+        android:layout_marginBottom="116dp"
         android:text="¿Olvidaste tu contraseña o usuario?"
         android:textColor="#087FFF"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/btnIngresar"
-        app:layout_constraintStart_toStartOf="@+id/txtUserPass"
-        app:layout_constraintTop_toBottomOf="@+id/txtUserPass" />
+        app:layout_constraintBottom_toTopOf="@+id/btnIngresarEstu"
+        app:layout_constraintStart_toStartOf="@+id/logCont"
+        app:layout_constraintTop_toBottomOf="@+id/logCont" />
 
     <Button
-        android:id="@+id/btnIngresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="282dp"
+        android:id="@+id/btnIngresarDoce"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginEnd="30dp"
         android:backgroundTint="#68DD02"
-        android:text="Ingresar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LinkRecuperacion" />
+        android:onClick="Iniciar_Docente"
+        android:text="Ingresar Docente"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnIngresarEstu"
+        app:layout_constraintEnd_toStartOf="@+id/btnIngresarEstu"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
