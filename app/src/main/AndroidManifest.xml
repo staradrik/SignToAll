@@ -13,13 +13,13 @@
         android:theme="@style/Theme.SignToAll"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ActividadEspanol"
+            android:exported="true" />
+        <activity
             android:name=".Respuesta"
             android:exported="false" />
         <activity
             android:name=".espanolJugar"
-            android:exported="false" />
-        <activity
-            android:name=".espanol"
             android:exported="false" />
         <activity
             android:name=".matematicas"

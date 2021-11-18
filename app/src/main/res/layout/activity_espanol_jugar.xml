@@ -51,8 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="40"
-            android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/Pinguino" />
+            android:contentDescription=""
+            app:srcCompat="@drawable/img1" />
 
         <EditText
             android:id="@+id/editTextTextPersonName"
@@ -65,7 +65,7 @@
             android:minHeight="48dp" />
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/btnConfirmar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

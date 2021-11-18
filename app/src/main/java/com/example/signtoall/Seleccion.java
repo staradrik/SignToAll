@@ -21,7 +21,7 @@ public class Seleccion extends AppCompatActivity {
         startActivity(i);
     }
     public void espanol (View view){
-        Intent i=new Intent(this, espanol.class);
+        Intent i=new Intent(this, ActividadEspanol.class);
         startActivity(i);
     }
 

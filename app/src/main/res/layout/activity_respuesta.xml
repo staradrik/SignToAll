@@ -28,7 +28,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    app:srcCompat="@drawable/sapo" />
+                    app:srcCompat="@drawable/img2" />
 
                 <TextView
                     android:id="@+id/textView9"
@@ -37,50 +37,13 @@
                     android:layout_weight="1"
                     android:text="@string/sapo" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
                 android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    app:srcCompat="@drawable/Pinguino" />
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/ping_ino" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    app:srcCompat="@drawable/Leon" />
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/le_n" />
-            </LinearLayout>
+                android:orientation="horizontal"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -94,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    app:srcCompat="@drawable/ardilla" />
+                    app:srcCompat="@drawable/img7" />
 
                 <TextView
                     android:id="@+id/textView12"
@@ -116,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    app:srcCompat="@drawable/buho" />
+                    app:srcCompat="@drawable/img5" />
 
                 <TextView
                     android:id="@+id/textView13"
@@ -138,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    app:srcCompat="@drawable/gorila" />
+                    app:srcCompat="@drawable/img6" />
 
                 <TextView
                     android:id="@+id/textView14"
@@ -160,7 +123,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    app:srcCompat="@drawable/oso" />
+                    app:srcCompat="@drawable/img4" />
 
                 <TextView
                     android:id="@+id/textView15"
@@ -182,7 +145,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    app:srcCompat="@drawable/pajaro" />
+                    app:srcCompat="@drawable/img9" />
 
                 <TextView
                     android:id="@+id/textView16"
@@ -204,7 +167,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    app:srcCompat="@drawable/perro" />
+                    app:srcCompat="@drawable/img3" />
 
                 <TextView
                     android:id="@+id/textView17"
@@ -226,7 +189,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    app:srcCompat="@drawable/tigre" />
+                    app:srcCompat="@drawable/img10" />
 
                 <TextView
                     android:id="@+id/textView18"
