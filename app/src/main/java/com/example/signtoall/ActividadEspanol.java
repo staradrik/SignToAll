@@ -10,22 +10,18 @@ import android.widget.Button;
 public class ActividadEspanol extends AppCompatActivity {
 
 
-
-
-
-
-        Button btnJugar, btnRespuestas, bntAcerca;
+        Button btnJugar, btnRespuestas;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_actividad_espanol);
             btnJugar =  (Button) findViewById(R.id.btnJugar);
             btnRespuestas=(Button)findViewById(R.id.btnRes);
-            bntAcerca=(Button)findViewById(R.id.btnMas);
+
+
             btnJugar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
                     Intent pagina2= new Intent(com.example.signtoall.ActividadEspanol.this,espanolJugar.class);
                     startActivity(pagina2);
                 }
