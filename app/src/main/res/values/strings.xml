@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">SignToAll</string>
+    <string name="guia">Guia</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="jugar">jugar</string>
+    <string name="button">Button</string>
+    <string name="vidas_3">Vidas: 3</string>
+    <string name="puntos_0">Puntos: 0</string>
+    <string name="name">Name</string>
+    <string name="textview">TextView</string>
+    <string name="sapo">Sapo</string>
+    <string name="ping_ino">Pingüino</string>
+    <string name="le_n">León</string>
+    <string name="ardilla">Ardilla</string>
+    <string name="b_ho">Búho</string>
+    <string name="gorila">Gorila</string>
+    <string name="oso">Oso</string>
+    <string name="pajaro">Pajaro</string>
+    <string name="perro">Perro</string>
+    <string name="tigre">Tigre</string>
+    <string name="respuestas">Respuestas</string>
 </resources>

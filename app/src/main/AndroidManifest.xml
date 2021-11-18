@@ -10,8 +10,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.SignToAll">
+        android:theme="@style/Theme.SignToAll"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Respuesta"
+            android:exported="false" />
+        <activity
+            android:name=".espanolJugar"
+            android:exported="false" />
         <activity
             android:name=".espanol"
             android:exported="false" />
