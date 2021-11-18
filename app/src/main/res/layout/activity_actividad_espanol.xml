@@ -9,7 +9,7 @@
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -22,8 +22,8 @@
 
     <Button
         android:id="@+id/btnMas"
-        android:layout_width="455dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
         android:text="@string/acerca_de"
         android:textSize="14sp"
@@ -35,8 +35,8 @@
 
     <Button
         android:id="@+id/btnJugar"
-        android:layout_width="455dp"
-        android:layout_height="55dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:text="@string/jugar"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/btnRes"
@@ -47,8 +47,8 @@
 
     <Button
         android:id="@+id/btnRes"
-        android:layout_width="461dp"
-        android:layout_height="62dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:text="@string/respuestas"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/btnMas"
@@ -59,12 +59,13 @@
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="30dp"
         android:hint="@string/app_name"
         android:text="ADIVINA"
+        android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView13"
