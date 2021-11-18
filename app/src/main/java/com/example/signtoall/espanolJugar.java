@@ -23,20 +23,17 @@ public class espanolJugar extends AppCompatActivity {
     String[] NombreAnimal2={"Pinguino","Sapo","Perro","Oso","Búho","Gorila","Ardilla","Leon","Pajaro","Tigre"};
     String[] ImagenAnimal={"img1","img2","img3","img4","img5","img6","img7","img8","img9","img10",};
 
-
-
     int intpunto=0;
     int intvidas=3;
     int numerogenerado=0;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_espanol_jugar);
 
-     //   txtcorrecto=(TextView)findViewById(R.id.txtcorrecto);
-       // txtincorrecto=(TextView)findViewById(R.id.txtincorrecto);
+        txtcorrecto=(TextView)findViewById(R.id.txtcorrecto);
+        txtincorrecto=(TextView)findViewById(R.id.txtincorrecto);
 
         puntos=(TextView)findViewById(R.id.txtPuntos);
         vidas=(TextView)findViewById(R.id.txtVidas);
@@ -45,7 +42,7 @@ public class espanolJugar extends AppCompatActivity {
         txtedit=(EditText)findViewById(R.id.editTextTextPersonName);
         btnconfirmar=(Button)findViewById(R.id.btnConfirmar);
 
-        String textoconfirmar = txtedit.getText().toString().toLowerCase();
+        establecer_imagen(numerogenerado);
 
         btnconfirmar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,14 +50,14 @@ public class espanolJugar extends AppCompatActivity {
                 String textoconfirmar= txtedit.getText().toString().toLowerCase();
                 if(textoconfirmar.equals(NombreAnimal[numerogenerado])|textoconfirmar.equals(NombreAnimal2[numerogenerado])){
                     txtcorrecto.setVisibility(View.VISIBLE);
-                    intpunto=intpunto+1;
-                    puntos.setText("Puntos: "+ intpunto);
+                    intpunto = intpunto + 1;
+                    puntos.setText("Puntos: " + intpunto);
                     esperar1();
                 }
                 else {
                     txtincorrecto.setVisibility(View.VISIBLE);
-                    intvidas=intvidas-1;
-                    vidas.setText("Vidas: "+ intvidas);
+                    intvidas = intvidas - 1;
+                    vidas.setText("Vidas: " + intvidas);
                     esperar2();
                 }
                 if(intvidas==0){
@@ -80,7 +77,7 @@ public class espanolJugar extends AppCompatActivity {
                 btnconfirmar.setVisibility(View.VISIBLE);
                 txtincorrecto.setVisibility(View.INVISIBLE);
                 txtedit.setText("");
-                txtedit.setHint("Ingrese el personaje");
+                txtedit.setHint("Ingrese el animal");
             }
         }.start();
     }
@@ -94,12 +91,12 @@ public class espanolJugar extends AppCompatActivity {
             @Override
             public void onFinish() {
                 btnconfirmar.setVisibility(View.VISIBLE);
-                numerogenerado=numerogenerado+1;
+                numerogenerado = numerogenerado + 1;
                 contador.setText("");
                 establecer_imagen(numerogenerado);
                 txtcorrecto.setVisibility(View.INVISIBLE);
                 txtedit.setText("");
-                txtedit.setHint("Ingrese el personaje");
+                txtedit.setHint("Ingrese el animal");
             }
         }.start();
     }
@@ -107,7 +104,4 @@ public class espanolJugar extends AppCompatActivity {
         int id = getResources().getIdentifier(ImagenAnimal[numero],"mipmap",getPackageName());
         imagen.setImageResource(id);
     }
-
-
-
-    }
+}

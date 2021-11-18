@@ -6,6 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".espanolJugar">
 
+    <TextView
+        android:id="@+id/txtincorrecto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="381dp" />
+
+    <TextView
+        android:id="@+id/txtcorrecto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="382dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -70,5 +88,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Enviar" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
