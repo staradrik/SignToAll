@@ -10,8 +10,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.Locale;
-
 public class espanolJugar extends AppCompatActivity {
 
     TextView puntos,contador,vidas,txtcorrecto,txtincorrecto;
@@ -20,8 +18,8 @@ public class espanolJugar extends AppCompatActivity {
     Button btnconfirmar;
 
     String[] NombreAnimal={"pingúino","sapo","perro","oso","búho","gorila","ardilla","león","pajaro","tigre"};
-    String[] NombreAnimal2={"Pinguino","Sapo","Perro","Oso","Búho","Gorila","Ardilla","Leon","Pajaro","Tigre"};
-    String[] ImagenAnimal={"img1","img2","img3","img4","img5","img6","img7","img8","img9","img10",};
+    String[] NombreAnimal2={"pinguino","Sapo","Perro","Oso","Búho","Gorila","Ardilla","Leon","Pajaro","Tigre"};
+    String[] ImagenAnimal={"img1","img2","img3","img4","img5","img6","img7","img8","img9","img10"};
 
     int intpunto=0;
     int intvidas=3;
@@ -34,15 +32,13 @@ public class espanolJugar extends AppCompatActivity {
 
         txtcorrecto=(TextView)findViewById(R.id.txtcorrecto);
         txtincorrecto=(TextView)findViewById(R.id.txtincorrecto);
-
         puntos=(TextView)findViewById(R.id.txtPuntos);
         vidas=(TextView)findViewById(R.id.txtVidas);
         contador=(TextView)findViewById(R.id.Cuenta);
-        imagen=(ImageView)findViewById(R.id.image);
+        imagen=(ImageView)findViewById(R.id.ImagenTablero);
         txtedit=(EditText)findViewById(R.id.editTextTextPersonName);
         btnconfirmar=(Button)findViewById(R.id.btnConfirmar);
 
-        establecer_imagen(numerogenerado);
 
         btnconfirmar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,7 +97,7 @@ public class espanolJugar extends AppCompatActivity {
         }.start();
     }
     void establecer_imagen(int numero){
-        int id = getResources().getIdentifier(ImagenAnimal[numero],"mipmap",getPackageName());
+        int id = getResources().getIdentifier(ImagenAnimal[numero],"drawable",getPackageName());
         imagen.setImageResource(id);
     }
 }
