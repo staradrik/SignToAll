@@ -156,6 +156,7 @@
         android:layout_marginEnd="18dp"
         android:backgroundTint="#68DD02"
         android:text="REINICIAR"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toStartOf="@+id/btnsalirM"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
@@ -167,6 +168,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#68DD02"
         android:text="SALIR"
+        app:cornerRadius="20dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnReiniciar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnReiniciar" />
@@ -181,6 +183,19 @@
         app:layout_constraintHorizontal_bias="0.549"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnReiniciar" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:gravity="center"
+        android:fontFamily="cursive"
+        android:textSize="20sp"
+        android:text="ENCUENTRA LAS IMAGENES SIMILARES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

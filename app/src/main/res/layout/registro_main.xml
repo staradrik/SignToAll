@@ -104,6 +104,7 @@
         android:layout_marginBottom="179dp"
         android:backgroundTint="#68DD02"
         android:text="Soy docente"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnRegEst"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,6 +117,7 @@
         android:layout_marginEnd="24dp"
         android:backgroundTint="#68DD02"
         android:text="Soy estudiante"
+        app:cornerRadius="20dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnRegDoc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnRegDoc" />

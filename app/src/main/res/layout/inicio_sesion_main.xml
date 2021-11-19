@@ -10,16 +10,17 @@
     <Button
         android:id="@+id/btnCerrar3"
         android:layout_width="111dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="484dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="205dp"
         android:backgroundTint="#68DD02"
         android:onClick="Cerrar"
         android:text="Cerrar"
-        app:layout_constraintBottom_toTopOf="@+id/txtDocumento"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresarEstu"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <View
         android:id="@+id/view2"
@@ -32,24 +33,23 @@
         android:background="#BAFFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnIngresarEstu"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="61dp"
-        android:layout_marginBottom="296dp"
         android:backgroundTint="#68DD02"
         android:onClick="Iniciar_Estudiante"
         android:text="Ingresar Estudiante"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCerrar3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnIngresarDoce"
-        app:layout_constraintTop_toBottomOf="@+id/LinkRecuperacion" />
+        app:layout_constraintTop_toBottomOf="@+id/LinkRecuperacion"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/logCorreo"
@@ -57,21 +57,22 @@
         android:layout_height="0dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginBottom="37dp"
+        android:layout_marginBottom="38dp"
         android:ems="10"
         android:hint="Correo o usuario"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/logCont"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUser" />
+        app:layout_constraintTop_toBottomOf="@+id/txtUser"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/txtUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="19dp"
         android:layout_marginBottom="34dp"
         android:text="Bienvenido al inicio de sesión."
         android:textColor="#68DD02"
@@ -94,7 +95,8 @@
         app:layout_constraintBottom_toTopOf="@+id/LinkRecuperacion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logCorreo" />
+        app:layout_constraintTop_toBottomOf="@+id/logCorreo"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/LinkRecuperacion"
@@ -118,6 +120,7 @@
         android:backgroundTint="#68DD02"
         android:onClick="Iniciar_Docente"
         android:text="Ingresar Docente"
+        app:cornerRadius="20dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnIngresarEstu"
         app:layout_constraintEnd_toStartOf="@+id/btnIngresarEstu"
         app:layout_constraintStart_toStartOf="parent" />
