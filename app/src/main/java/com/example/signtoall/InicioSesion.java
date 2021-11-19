@@ -17,18 +17,26 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class InicioSesion extends AppCompatActivity {
 
-    String ip = "192.168.0.106:80"; //ip del host para ahorrar tiempo
+    String ip = "192.168.20.27:80"; //ip del host para ahorrar tiempo
     EditText user, cont;
     String user1,cont1;
     Button btnIni_estu, btnIni_doce,btncer;
+
+    RequestQueue requestQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +76,42 @@ public class InicioSesion extends AppCompatActivity {
 
     }
 
+    private void Validar_Docente(String URL){
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if (!response.isEmpty()) {
+                    Guardarpreferencias();
+                    Limpiar();
+                    Intent i = new Intent(getApplicationContext(), Crud.class);
+                    startActivity(i);
+                } else {
+                    Toast.makeText(InicioSesion.this, "Usuario o Contraseña incorrectos", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(InicioSesion.this, error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> parametros = new HashMap<String, String>();
+                parametros.put("correo", user1);
+                parametros.put("contrasena", cont1);
+                return parametros;
+            }
+        };
+
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
+
+
+
     public void Iniciar_Estudiante(View v){
         user1=user.getText().toString();
         cont1=cont.getText().toString();
@@ -78,41 +122,6 @@ public class InicioSesion extends AppCompatActivity {
             Toast.makeText(InicioSesion.this, "Hay campos vacios", Toast.LENGTH_SHORT).show();
         }
 
-    }
-
-    private void Validar_Docente(String URL){
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                if(!response.isEmpty()){
-                    Guardarpreferencias();
-                    Limpiar();
-                    Intent i = new Intent(getApplicationContext(),Crud.class);
-                    startActivity(i);
-                }
-                else{
-                    Toast.makeText(InicioSesion.this, "Usuario o Contraseña incorrectos", Toast.LENGTH_SHORT).show();
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(InicioSesion.this, error.toString(), Toast.LENGTH_SHORT).show();
-            }
-        }){
-            @Nullable
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String> parametros=new HashMap<String,String>();
-                parametros.put("correo",user1);
-                parametros.put("contrasena",cont1);
-                return parametros;
-            }
-        };
-
-
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
     }
 
     private void Validar_Estudiante(String URL){
@@ -179,6 +188,5 @@ public class InicioSesion extends AppCompatActivity {
     private void Limpiar(){
         user.setText("");
         cont.setText("");
-
     }
 }

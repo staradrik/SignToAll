@@ -23,7 +23,7 @@ import java.util.Map;
 public class Registro extends AppCompatActivity {
 
 
-    String ip = "192.168.0.106:80"; //ip del host para ahorrar tiempo
+    String ip = "192.168.20.27:80"; //ip del host para ahorrar tiempo
     EditText txtNombre, txtApellido, editTextNumberSigned, txtCorreo, txtPass1, txtPass2 ;
     Button ButtonProfesor, ButtonEstudiante;
     RequestQueue requestQueue;
@@ -46,7 +46,16 @@ public class Registro extends AppCompatActivity {
         ButtonProfesor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ejecutarProfesor("http://" + ip + "/Sign_to_All/Insertar_profesor.php");
+                if(!txtNombre.getText().toString().isEmpty() && !txtApellido.getText().toString().isEmpty() && !editTextNumberSigned.getText().toString().isEmpty() && !txtCorreo.getText().toString().isEmpty() && !txtPass1.getText().toString().isEmpty() && !txtPass2.getText().toString().isEmpty()) {
+                    if (txtPass1.getText().toString().equals(txtPass2.getText().toString())){
+                        ejecutarProfesor("http://" + ip + "/Sign_to_All/Insertar_profesor.php");
+                        Limpiar();
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Las contraseñas no coinciden", Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    Toast.makeText(getApplicationContext(), "Algunos de los campos esta vacio", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -54,13 +63,19 @@ public class Registro extends AppCompatActivity {
         ButtonEstudiante.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ejecutarEstudiante("http://" + ip + "/Sign_to_All/Insertar_estudiante.php");
+                if(!txtNombre.getText().toString().isEmpty() && !txtApellido.getText().toString().isEmpty() && !editTextNumberSigned.getText().toString().isEmpty() && !txtCorreo.getText().toString().isEmpty() && !txtPass1.getText().toString().isEmpty() && !txtPass2.getText().toString().isEmpty()){
+                    if (txtPass1.getText().toString().equals(txtPass2.getText().toString())){
+                        ejecutarEstudiante("http://" + ip + "/Sign_to_All/Insertar_estudiante.php");
+                        Limpiar();
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Las contraseñas no coinciden", Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    Toast.makeText(getApplicationContext(), "Algunos de los campos esta vacio", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
-
-
-
 
 
     private void ejecutarEstudiante(String URL){
@@ -85,7 +100,6 @@ public class Registro extends AppCompatActivity {
                 parametros.put("documento",editTextNumberSigned.getText().toString());
                 parametros.put("correo",txtCorreo.getText().toString());
                 parametros.put("contrasena",txtPass1.getText().toString());
-                parametros.put("confir_contrasena",txtPass2.getText().toString());
                 return parametros;
             }
         };
@@ -115,11 +129,19 @@ public class Registro extends AppCompatActivity {
                 parametros.put("documento",editTextNumberSigned.getText().toString());
                 parametros.put("correo",txtCorreo.getText().toString());
                 parametros.put("contrasena",txtPass1.getText().toString());
-                parametros.put("confir_contrasena",txtPass2.getText().toString());
                 return parametros;
             }
         };
         requestQueue= Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+    }
+
+    private void Limpiar(){
+        txtNombre.setText("");
+        txtApellido.setText("");
+        editTextNumberSigned.setText("");
+        txtCorreo.setText("");
+        txtPass1.setText("");
+        txtPass2.setText("");
     }
 }
