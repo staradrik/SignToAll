@@ -100,7 +100,7 @@ public class matematicas extends AppCompatActivity {
         txtPuntos=findViewById(R.id.txtPuntaje);
         puntuacion=0;
         aciertos=0;
-        txtPuntos.setText("puntuación: "+puntuacion);
+        txtPuntos.setText("Puntuación: "+puntuacion);
     }
     private void cargarimagenes(){
         imagenes=new int[]{
