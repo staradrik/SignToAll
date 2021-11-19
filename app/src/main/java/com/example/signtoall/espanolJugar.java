@@ -40,8 +40,6 @@ public class espanolJugar extends AppCompatActivity {
         btnconfirmar=(Button)findViewById(R.id.btnConfirmar);
 
         Toast toastP = Toast.makeText(getApplicationContext(), "Has perdido!!", Toast.LENGTH_LONG);
-        Toast toastG = Toast.makeText(getApplicationContext(), "Has ganado!!", Toast.LENGTH_LONG);
-        Toast toastC = Toast.makeText(getApplicationContext(), "Correcto!!", Toast.LENGTH_LONG);
         Toast toastI = Toast.makeText(getApplicationContext(), "Incorrecto!!", Toast.LENGTH_LONG);
 
         btnconfirmar.setOnClickListener(new View.OnClickListener() {
@@ -52,15 +50,19 @@ public class espanolJugar extends AppCompatActivity {
                     toastP.show();
                     finish();
                 }
-                if(numerogenerado + 1==NombreAnimal.length){
-                    toastG.show();
-                }
                 if(textoconfirmar.equals(NombreAnimal[numerogenerado])|textoconfirmar.equals(NombreAnimal2[numerogenerado])){
                     intpunto = intpunto + 1;
                     puntos.setText("Puntos: " + intpunto);
-                    toastC.show();
                     txtedit.setText("");
-                    esperar1();
+                    if(numerogenerado == NombreAnimal.length - 1){
+                        Toast toastG = Toast.makeText(getApplicationContext(), "Has ganado!!", Toast.LENGTH_LONG);
+                        toastG.show();
+                        finish();
+                    }else{
+                        Toast toastC = Toast.makeText(getApplicationContext(), "Correcto!!", Toast.LENGTH_LONG);
+                        toastC.show();
+                        esperar1();
+                    }
                 }
                 else {
                     intvidas = intvidas - 1;
@@ -95,8 +97,8 @@ public class espanolJugar extends AppCompatActivity {
             @Override
             public void onFinish() {
                 btnconfirmar.setVisibility(View.VISIBLE);
-                numerogenerado = numerogenerado + 1;
                 contador.setText("");
+                numerogenerado = numerogenerado + 1;
                 establecer_imagen(numerogenerado);
                 txtedit.setHint("Ingrese el animal");
             }
