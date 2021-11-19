@@ -49,7 +49,6 @@ public class Registro extends AppCompatActivity {
                 if(!txtNombre.getText().toString().isEmpty() && !txtApellido.getText().toString().isEmpty() && !editTextNumberSigned.getText().toString().isEmpty() && !txtCorreo.getText().toString().isEmpty() && !txtPass1.getText().toString().isEmpty() && !txtPass2.getText().toString().isEmpty()) {
                     if (txtPass1.getText().toString().equals(txtPass2.getText().toString())){
                         ejecutarProfesor("http://" + ip + "/Sign_to_All/Insertar_profesor.php");
-                        Limpiar();
                     }else{
                         Toast.makeText(getApplicationContext(), "Las contraseñas no coinciden", Toast.LENGTH_LONG).show();
                     }
@@ -66,7 +65,6 @@ public class Registro extends AppCompatActivity {
                 if(!txtNombre.getText().toString().isEmpty() && !txtApellido.getText().toString().isEmpty() && !editTextNumberSigned.getText().toString().isEmpty() && !txtCorreo.getText().toString().isEmpty() && !txtPass1.getText().toString().isEmpty() && !txtPass2.getText().toString().isEmpty()){
                     if (txtPass1.getText().toString().equals(txtPass2.getText().toString())){
                         ejecutarEstudiante("http://" + ip + "/Sign_to_All/Insertar_estudiante.php");
-                        Limpiar();
                     }else{
                         Toast.makeText(getApplicationContext(), "Las contraseñas no coinciden", Toast.LENGTH_LONG).show();
                     }
@@ -84,7 +82,7 @@ public class Registro extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(getApplicationContext(), "OPERACION EXITOSA", Toast.LENGTH_LONG).show();
-
+                Limpiar();
             }
         }, new Response.ErrorListener() {
             @Override
@@ -113,7 +111,7 @@ public class Registro extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(getApplicationContext(), "OPERACION EXITOSA", Toast.LENGTH_LONG).show();
-
+                Limpiar();
             }
         }, new Response.ErrorListener() {
             @Override
