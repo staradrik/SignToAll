@@ -28,6 +28,7 @@ import java.util.Map;
 
 public class Crud extends AppCompatActivity {
 
+    String ip = "192.168.0.106:80"; //ip del host para ahorrar tiempo
     EditText crudNombre, crudApellido, crudDocumento, crudCorreo;
     RequestQueue requestQueue;
 
@@ -43,7 +44,7 @@ public class Crud extends AppCompatActivity {
     }
 
     public void Buscar(View v){
-        buscarEstudiante ( "http://192.168.0.106/Sign_to_All/Buscar_estudiante.php?documento="+crudDocumento.getText ()+"");
+        buscarEstudiante ( "http://" + ip + "/Sign_to_All/Buscar_estudiante.php?documento="+crudDocumento.getText ()+"");
     }
 
     private void buscarEstudiante(String URL){
@@ -74,7 +75,7 @@ public class Crud extends AppCompatActivity {
     }
 
     public void Eliminar(View v){
-        eliminarEstudiante ( "http://192.168.0.106/Sign_to_All/Eliminar_estudiante.php" );
+        eliminarEstudiante ( "http://" + ip + "/Sign_to_All/Eliminar_estudiante.php" );
     }
 
     private void eliminarEstudiante(String URL){
@@ -105,7 +106,7 @@ public class Crud extends AppCompatActivity {
     }
 
     public void Editar(View v){
-        editarEstudiante ( "http://192.168.0.106/Sign_to_All/Editar_estudiante.php" );
+        editarEstudiante ( "http://" + ip + "/Sign_to_All/Editar_estudiante.php" );
     }
 
     private void editarEstudiante(String URL){

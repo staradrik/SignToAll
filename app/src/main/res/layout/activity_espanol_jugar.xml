@@ -6,26 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".espanolJugar">
 
-    <TextView
-        android:id="@+id/txtincorrecto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtcorrecto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/txtcorrecto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="317dp"
-        android:text="TextView"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/txtincorrecto" />
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
