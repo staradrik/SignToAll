@@ -31,7 +31,7 @@ import java.util.Map;
 
 public class InicioSesion extends AppCompatActivity {
 
-    String ip = "192.168.20.27:80"; //ip del host para ahorrar tiempo
+    String ip = "192.168.0.106:80"; //ip del host para ahorrar tiempo
     EditText user, cont;
     String user1,cont1;
     Button btnIni_estu, btnIni_doce,btncer;
